@@ -1,0 +1,24 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MovieManager" x:Class="MovieManager.Profile" 
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="200" Width="150">
+    <UserControl.Resources>
+        <Style x:Key="menuItemStyle" TargetType="RibbonSplitMenuItem">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="MouseOverBackground" Value="#7BDA37"/>
+            
+        </Style>
+    </UserControl.Resources>
+    <Grid >
+        <RibbonSplitButton x:Name="ProfileName" FontSize="15" Foreground="Black" HorizontalContentAlignment="Center" Padding="10,15,0,0" >
+            <RibbonSplitMenuItem x:Name="menuItemViewProfile" Header="Cập nhật thông tin" Style="{StaticResource menuItemStyle}" />
+            <RibbonSplitMenuItem x:Name="menuItemLogout" Header="Đăng xuất" Style="{StaticResource menuItemStyle}"  Click="RibbonSplitMenuItem_Click"/>
+        </RibbonSplitButton>
+    </Grid>
+</UserControl>

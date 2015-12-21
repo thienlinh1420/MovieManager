@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MovieManager" 
+        xmlns:SearchBox="clr-namespace:MovieManager.SearchBox" 
+        x:Name="mainWindow" x:Class="MovieManager.MainWindow"
+        Background="Gray" 
+        Icon="Resources/Background-Icon/logo.png"
+        Title="MainWindow" Height="715" Width="953" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid x:Name="RootGrid">
+
+        <ScrollViewer x:Name="scrollviewerMain" 
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Auto">
+            <Grid Width="1349">
+                <local:Header x:Name="ucHeader" 
+                              VerticalAlignment="Top" 
+                              Height="50" Margin="0" 
+                              ScrollViewer.CanContentScroll="False">
+                    <local:Header.Effect>
+                        <DropShadowEffect BlurRadius="20" ShadowDepth="3"/>
+                    </local:Header.Effect>
+                </local:Header>
+                <WrapPanel x:Name="pnShowList" Background="Transparent" Margin="0,130,0,136" ItemHeight="270" ItemWidth="180" MaxWidth="1000"/>
+                <SearchBox:SearchBox x:Name="ucSearchBox" Margin="0,10,160,0" VerticalAlignment="Top" Width="190" HorizontalAlignment="Right"/>
+            </Grid>
+        </ScrollViewer>
+        <Grid x:Name="OverlayGrid" 
+              Background="#B2000000" 
+              Visibility="Collapsed" 
+              MouseLeftButtonUp="OverlayGrid_MouseLeftButtonUp" 
+              KeyDown="OverlayGrid_KeyDown" />
+            
+    </Grid>
+</Window>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6745BAF-1DF6-4C36-BC63-9FBFA0B63953}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieManager</RootNamespace>
+    <AssemblyName>MovieManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="system.windows.controls.ribbon" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MovieInfo\CommentLine.xaml.cs">
+      <DependentUpon>CommentLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MovieInfo\FilmDetail.xaml.cs">
+      <DependentUpon>FilmDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Styles\WatermarkTextBox.cs" />
+    <Compile Include="SearchBox\AutoCompleteTextBox.cs" />
+    <Compile Include="SearchBox\AutoCompleteTextBoxItem.xaml.cs">
+      <DependentUpon>AutoCompleteTextBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBox\Enumerations.cs" />
+    <Compile Include="SearchBox\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="YouTubePlayer.xaml.cs">
+      <DependentUpon>YouTubePlayer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login_Signup\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Header.xaml.cs">
+      <DependentUpon>Header.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Signup\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MovieInfo\CommentLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MovieInfo\FilmDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MovieThumbnail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoviePopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBlockHyperlinkStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\WatermarkTextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchBox\AutoCompleteTextBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchBox\SearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="YouTubePlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MovieThumbnail.xaml.cs">
+      <DependentUpon>MovieThumbnail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoviePopup.xaml.cs">
+      <DependentUpon>MoviePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieManager_BUS\MovieManager_BUS.csproj">
+      <Project>{dcad3a63-e8ab-4f93-b50a-f2df973a29a1}</Project>
+      <Name>MovieManager_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieManager_DTO\MovieManager_DTO.csproj">
+      <Project>{1c71973f-0230-40c9-a1c0-3bd2c0509782}</Project>
+      <Name>MovieManager_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ac-mong-dem-giang-sinh.jpg" />
+    <Resource Include="Resources\Images\Alice-Through-The-Looking-Glass.jpg" />
+    <Resource Include="Resources\Images\bi-mat-sau-anh-mat.jpg" />
+    <Resource Include="Resources\Images\Captain-America-Civil-War.jpg" />
+    <Resource Include="Resources\Images\Cha_va_con_gai.jpg" />
+    <Resource Include="Resources\Images\chu-khung-long-tot-bung.jpg" />
+    <Resource Include="Resources\Images\co-gai-mang-ten-niem-vui.jpg" />
+    <Resource Include="Resources\Images\Dang-cap-thu-cung.jpg" />
+    <Resource Include="Resources\Images\Deadpool.jpg" />
+    <Resource Include="Resources\Images\em-la-ba-noi-cua-anh.jpg" />
+    <Resource Include="Resources\Images\find-dory.jpg" />
+    <Resource Include="Resources\Images\gia-gan-my-nhan-va-gang-to.jpg" />
+    <Resource Include="Resources\Images\hay-khong-bang-hen.jpg" />
+    <Resource Include="Resources\Images\hung-ali.jpg" />
+    <Resource Include="Resources\Images\hunger-games-mockingjay-2.jpg" />
+    <Resource Include="Resources\Images\ke-san-bong-dem.jpg" />
+    <Resource Include="Resources\Images\Kungfu-panda-3.jpg" />
+    <Resource Include="Resources\Images\Peanuts.jpg" />
+    <Resource Include="Resources\Images\song_tu_than.jpg" />
+    <Resource Include="Resources\Images\Star-war- than-luc-thuc-tinh.jpg" />
+    <Resource Include="Resources\Images\Steve-Jobs.jpg" />
+    <Resource Include="Resources\Images\the-jungle-book.jpg" />
+    <Resource Include="Resources\Images\the-walking-dead-season-6.jpg" />
+    <Resource Include="Resources\Images\tro-choi-cua-ke-khung-bo.jpg" />
+    <Resource Include="Resources\Images\Victor-Frackenstein.jpg" />
+    <Resource Include="Resources\Images\Yeu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background-Icon\bg_showtimes_favorite.png" />
+    <Resource Include="Resources\Background-Icon\logo.png" />
+    <Resource Include="Resources\Background-Icon\overlay_rich.png" />
+    <Resource Include="Resources\Background-Icon\search_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
