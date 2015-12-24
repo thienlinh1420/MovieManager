@@ -23,7 +23,12 @@ namespace MovieManager_BUS
         {
             return phimDAO.SearchByText(searchText);
         }
-
+        public List<PhimDTO> SearchByDate(DateTime date, RapChieuPhimDTO rapDTO)
+        {
+            SuatChieuDAO suatChieuDAO = new SuatChieuDAO();
+            List<SuatChieuDTO> listShowings = suatChieuDAO.SearchByTime(date);
+            return phimDAO.SearchByShowtimes(listShowings, rapDTO);
+        }
 
     }
 }

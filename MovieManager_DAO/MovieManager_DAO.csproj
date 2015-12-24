@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CumRapChieuPhimDAO.cs" />
     <Compile Include="CUM_RAP_CHIEU_PHIM.cs" />
     <Compile Include="DanhGiaBinhLuanDAO.cs" />
     <Compile Include="DANH_GIA_VA_BINH_LUAN.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="GheDAO.cs" />
     <Compile Include="KhuyenMaiDAO.cs" />
     <Compile Include="KHUYEN_MAI.cs" />
+    <Compile Include="LOAI_NGUOI_DUNG.cs" />
     <Compile Include="MovieManagerDataContext.cs" />
     <Compile Include="NguoiDungDAO.cs" />
     <Compile Include="NGUOI_DUNG.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RapChieuPhimDAO.cs" />
     <Compile Include="RAP_CHIEU_PHIM.cs" />
+    <Compile Include="SuatChieuDAO.cs" />
     <Compile Include="SUAT_CHIEU.cs" />
     <Compile Include="VE.cs" />
     <Compile Include="VeDAO.cs" />

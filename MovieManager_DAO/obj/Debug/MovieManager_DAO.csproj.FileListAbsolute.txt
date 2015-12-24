@@ -1,0 +1,12 @@
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\MovieManager_DAO.dll.config
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\MovieManager_DAO.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\MovieManager_DAO.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\EntityFramework.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\MovieManager_DTO.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\MovieManager_DTO.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\EntityFramework.xml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\obj\Debug\MovieManager_DAO.csprojResolveAssemblyReference.cache
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\obj\Debug\MovieManager_DAO.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DAO\obj\Debug\MovieManager_DAO.pdb

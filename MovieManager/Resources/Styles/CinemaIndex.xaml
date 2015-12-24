@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Showtimes="clr-namespace:MovieManager.Showtimes">
+    <Style x:Key="CinemaIndexStyle"
+          TargetType="{x:Type ToggleButton}">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Showtimes:CinemaIndex}">
+                    <Grid>
+                        <Image x:Name="PART_Background" 
+                            Source="/MovieManager;component/Resources/Background-Icon/sprite_bar_on.png" 
+                            Stretch="Fill"
+                               Visibility="Collapsed"
+                            />
+                        <TextBlock x:Name="PART_Editor" 
+                                    HorizontalAlignment="Left"        
+                                    Text="{TemplateBinding Text}"
+                                    FontSize="15"
+                                    Foreground="White"
+                                    Padding="10, 0, 0, 0" 
+                                    VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter TargetName="PART_Background"
+                                    Property="Visibility"
+                                    Value="Visible"/>
+                                    
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="PART_Background"
+                                    Property="Visibility"
+                                    Value="Visible"/>
+
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

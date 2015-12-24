@@ -8,41 +8,57 @@ using System.Data;
 
 namespace MovieManager_DAO
 {
-    //public class RapChieuPhimDAO
-    //{
-    //    public List<RapChieuPhimDTO> GetListRapChieuPhim()
-    //    {
-    //        List<RapChieuPhimDTO> lstRapDTO = new List<RapChieuPhimDTO>();
-    //        String query = "SELECT * FROM RAP_CHIEu_PHIM";
-    //        DataTable dt = DataProvider.ExcuteQuery(query);
-    //        foreach(DataRow dr in dt.Rows)
-    //        {
-    //            RapChieuPhimDTO rapDTO = new RapChieuPhimDTO();
-    //            rapDTO.ID = Convert.ToInt32(dr["ID"]);
-    //            rapDTO.Ten = dr["Ten"].ToString();
-    //            rapDTO.DiaChi = dr["Dia_chi"].ToString();
-    //            lstRapDTO.Add(rapDTO);
-    //        }
-    //        return lstRapDTO;
-    //    }
+    public class RapChieuPhimDAO
+    {
+        public List<RapChieuPhimDTO> GetListRapChieuPhim(int CineplexID)
+        {
+            List<RapChieuPhimDTO> listRapDTO = new List<RapChieuPhimDTO>();
+            var context = new MovieManagerDataContext();
+            var data = from cinema in context.RAP_CHIEU_PHIM
+                       where cinema.ID_CUM_RAP_CHIEU_PHIM == CineplexID
+                       select cinema;
+            foreach (var item in data)
+            {
+                RapChieuPhimDTO rapDTO = new RapChieuPhimDTO();
+                rapDTO.ID = item.ID;
+                rapDTO.IDCumRapChieuPhim = (int)item.ID_CUM_RAP_CHIEU_PHIM;
+                rapDTO.Ten = item.Ten;
+                rapDTO.DiaChi = item.Dia_chi;
+                listRapDTO.Add(rapDTO);
+            }
+            return listRapDTO;
+        }
 
-    //    public RapChieuPhimDTO Search(int ID)
-    //    {
-    //        RapChieuPhimDTO rapDTO = new RapChieuPhimDTO();
-    //        String query = "SELECT * FROM RAP_CHIEU_PHIM WHERE ID =" + ID.ToString();
-    //        DataTable dt = DataProvider.ExcuteQuery(query);
-    //        if(dt.Rows.Count != 0)
-    //        {
-    //            rapDTO.ID = ID;
-    //            rapDTO.Ten = dt.Rows[0]["Ten"].ToString();
-    //            rapDTO.DiaChi = dt.Rows[0]["Dia_chi"].ToString();
-    //            return rapDTO;
-    //        }
-    //        else
-    //        {
-    //            return null;
-    //        }
-            
-    //    }
-    //}
+        public RapChieuPhimDTO Search(int ID)
+        {
+            RapChieuPhimDTO rapDTO = new RapChieuPhimDTO();
+            var context = new MovieManagerDataContext();
+            var data = from cinema in context.RAP_CHIEU_PHIM
+                       where cinema.ID == ID
+                       select cinema;
+            var item = data.FirstOrDefault();
+            if (item != null)
+            {
+                rapDTO.ID = item.ID;
+                rapDTO.IDCumRapChieuPhim = (int)item.ID_CUM_RAP_CHIEU_PHIM;
+                rapDTO.Ten = item.Ten;
+                rapDTO.DiaChi = item.Dia_chi;
+                return rapDTO;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public RAP_CHIEU_PHIM ConvertFromDTO(RapChieuPhimDTO rapDTO)
+        {
+            var context = new MovieManagerDataContext();
+            var data = from cinema in context.RAP_CHIEU_PHIM
+                       where cinema.ID == rapDTO.ID
+                       select cinema;
+            return (RAP_CHIEU_PHIM)data.FirstOrDefault();
+        }
+    }
 }

@@ -21,7 +21,10 @@
                         <DropShadowEffect BlurRadius="20" ShadowDepth="3"/>
                     </local:Header.Effect>
                 </local:Header>
-                <WrapPanel x:Name="pnShowList" Background="Transparent" Margin="0,130,0,136" ItemHeight="270" ItemWidth="180" MaxWidth="1000"/>
+                <WrapPanel x:Name="pnShowList" 
+                           Background="Transparent" 
+                           Margin="0,130,0,10" 
+                           MaxWidth="1000"/>
                 <SearchBox:SearchBox x:Name="ucSearchBox" Margin="0,10,160,0" VerticalAlignment="Top" Width="190" HorizontalAlignment="Right"/>
             </Grid>
         </ScrollViewer>
@@ -30,6 +33,6 @@
               Visibility="Collapsed" 
               MouseLeftButtonUp="OverlayGrid_MouseLeftButtonUp" 
               KeyDown="OverlayGrid_KeyDown" />
-            
+
     </Grid>
 </Window>

@@ -9,6 +9,7 @@ namespace MovieManager_DTO
     public class RapChieuPhimDTO
     {
         private int _ID;
+        private int _IDCumRapChieuPhim;
         private string _Ten;
         private string _DiaChi;
 
@@ -18,6 +19,11 @@ namespace MovieManager_DTO
             set { _ID = value; }
         }
 
+        public int IDCumRapChieuPhim
+        {
+            get { return _IDCumRapChieuPhim; }
+            set { _IDCumRapChieuPhim = value; }
+        }
         public string Ten
         {
             get { return _Ten; }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CumRapChieuPhimDTO.cs" />
     <Compile Include="DanhGiaBinhLuanDTO.cs" />
     <Compile Include="GheDTO.cs" />
     <Compile Include="KhuyenMaiDTO.cs" />

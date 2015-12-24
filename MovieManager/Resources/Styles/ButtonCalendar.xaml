@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MovieManager.Showtimes">
+    <Style x:Key="ButtonCalendarStyle" 
+           TargetType="{x:Type ToggleButton}">
+           
+        <Setter Property="Height"
+                Value="50"/>
+        <Setter Property="Width"
+                Value="80"/>
+        <Setter Property="Margin"
+                Value="5, 0"/>
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ButtonCalendar}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="border" 
+                                            BorderThickness="2"
+                                            BorderBrush="Black"
+                                            CornerRadius="5"
+                                            Visibility="Collapsed"/>
+                        <Grid DataContext="ButtonCalendar">
+                            <TextBlock Margin="9,4,44,26" 
+                                                    Height="16"
+                                                    FontSize="15"
+                                                    Text="{TemplateBinding Month}" 
+                                       HorizontalAlignment="Left"/>
+                            <TextBlock Margin="9,20,39,10" 
+                                                Height="16"
+                                                FontSize="15"
+                                                Text="{TemplateBinding Weekday}" 
+                                       HorizontalAlignment="Left"/>
+                            <TextBlock FontSize="32"
+                                       Text="{TemplateBinding Day}" 
+                                       HorizontalAlignment="Right" 
+                                       Margin="0,0,8,0" />
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter Property="Visibility"
+                                    Value="Visible"
+                                    TargetName="border"/>
+                            <Setter Property="Background"
+                                    Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+    
+   

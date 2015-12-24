@@ -1,0 +1,11 @@
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_BUS.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_BUS.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_DAO.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_DTO.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\EntityFramework.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_DAO.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\MovieManager_DTO.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\bin\Debug\EntityFramework.xml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\obj\Debug\MovieManager_BUS.csprojResolveAssemblyReference.cache
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\obj\Debug\MovieManager_BUS.dll
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_BUS\obj\Debug\MovieManager_BUS.pdb

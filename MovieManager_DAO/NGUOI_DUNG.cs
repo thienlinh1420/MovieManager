@@ -21,6 +21,8 @@ namespace MovieManager_DAO
         [StringLength(20)]
         public string Mat_khau { get; set; }
 
+        public int? ID_LOAI_NGUOI_DUNG { get; set; }
+
         [StringLength(50)]
         public string Ho_ten { get; set; }
 
@@ -37,5 +39,7 @@ namespace MovieManager_DAO
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DANH_GIA_VA_BINH_LUAN> DANH_GIA_VA_BINH_LUAN { get; set; }
+
+        public virtual LOAI_NGUOI_DUNG LOAI_NGUOI_DUNG { get; set; }
     }
 }

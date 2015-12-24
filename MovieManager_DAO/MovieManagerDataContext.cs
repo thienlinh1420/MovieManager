@@ -12,9 +12,11 @@ namespace MovieManager_DAO
         {
         }
 
+        public virtual DbSet<CUM_RAP_CHIEU_PHIM> CUM_RAP_CHIEU_PHIM { get; set; }
         public virtual DbSet<DANH_GIA_VA_BINH_LUAN> DANH_GIA_VA_BINH_LUAN { get; set; }
         public virtual DbSet<GHE> GHE { get; set; }
         public virtual DbSet<KHUYEN_MAI> KHUYEN_MAI { get; set; }
+        public virtual DbSet<LOAI_NGUOI_DUNG> LOAI_NGUOI_DUNG { get; set; }
         public virtual DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public virtual DbSet<PHIM> PHIM { get; set; }
         public virtual DbSet<RAP_CHIEU_PHIM> RAP_CHIEU_PHIM { get; set; }
@@ -23,6 +25,11 @@ namespace MovieManager_DAO
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CUM_RAP_CHIEU_PHIM>()
+                .HasMany(e => e.RAP_CHIEU_PHIM)
+                .WithOptional(e => e.CUM_RAP_CHIEU_PHIM)
+                .HasForeignKey(e => e.ID_CUM_RAP_CHIEU_PHIM);
+
             modelBuilder.Entity<DANH_GIA_VA_BINH_LUAN>()
                 .Property(e => e.ID_NGUOI_DUNG)
                 .IsUnicode(false);
@@ -43,6 +50,11 @@ namespace MovieManager_DAO
                 .HasMany(e => e.VE)
                 .WithOptional(e => e.GHE)
                 .HasForeignKey(e => e.ID_GHE);
+
+            modelBuilder.Entity<LOAI_NGUOI_DUNG>()
+                .HasMany(e => e.NGUOI_DUNG)
+                .WithOptional(e => e.LOAI_NGUOI_DUNG)
+                .HasForeignKey(e => e.ID_LOAI_NGUOI_DUNG);
 
             modelBuilder.Entity<NGUOI_DUNG>()
                 .Property(e => e.Tai_khoan)

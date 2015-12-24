@@ -10,12 +10,19 @@ namespace MovieManager_DTO
     {
         private String _TaiKhoan;
         private String _MatKhau;
+        private int _IDLoaiNguoiDung;
         private String _HoTen;
         private String _DiaChi;
         private DateTime _NgaySinh;
         private String _SoDienThoai;
         private String _CMND;
 
+
+        public int IDLoaiNguoiDung
+        {
+            get { return _IDLoaiNguoiDung; }
+            set { _IDLoaiNguoiDung = value; }
+        }
         public String CMND
         {
             get { return _CMND; }

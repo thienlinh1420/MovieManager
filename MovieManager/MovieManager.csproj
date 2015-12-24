@@ -67,11 +67,22 @@
     <Compile Include="AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Showtimes\ButtonCalendar.cs" />
+    <Compile Include="Showtimes\CinemaIndex.cs" />
     <Compile Include="MovieInfo\CommentLine.xaml.cs">
       <DependentUpon>CommentLine.xaml</DependentUpon>
     </Compile>
     <Compile Include="MovieInfo\FilmDetail.xaml.cs">
       <DependentUpon>FilmDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Showtimes\CineplexIndex.xaml.cs">
+      <DependentUpon>CineplexIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Showtimes\FilmInfoInShowtimes.xaml.cs">
+      <DependentUpon>FilmInfoInShowtimes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Showtimes\MovieShowtimes.xaml.cs">
+      <DependentUpon>MovieShowtimes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Styles\WatermarkTextBox.cs" />
     <Compile Include="SearchBox\AutoCompleteTextBox.cs" />
@@ -90,6 +101,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ButtonCalendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\CinemaIndex.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,6 +139,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MovieInfo\FilmDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Showtimes\CineplexIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Showtimes\FilmInfoInShowtimes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Showtimes\MovieShowtimes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,6 +277,9 @@
     <Resource Include="Resources\Background-Icon\logo.png" />
     <Resource Include="Resources\Background-Icon\overlay_rich.png" />
     <Resource Include="Resources\Background-Icon\search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background-Icon\sprite_bar_on.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

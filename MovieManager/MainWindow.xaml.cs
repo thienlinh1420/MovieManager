@@ -2,6 +2,7 @@
 using MovieManager_DTO;
 using MovieManager.MovieInfo;
 using MovieManager.Login_Signup;
+using MovieManager.Showtimes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,10 +41,10 @@ namespace MovieManager
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ShowFilmsPage();
+            //ShowFilmsPage();
+            ShowCinemasPage();
             
         }
-
         private void ShowMovieShowtimes()
         {
             pnShowList.Children.Clear();
@@ -51,11 +52,19 @@ namespace MovieManager
         private void ShowCinemasPage()
         {
             pnShowList.Children.Clear();
+            pnShowList.ItemWidth = 1000;
+            pnShowList.ItemHeight = double.NaN;
+            var movieShowtimes = new MovieShowtimes();
+           
+            pnShowList.Children.Add(movieShowtimes);
+
         }
 
         private void ShowFilmsPage()
         {
             pnShowList.Children.Clear();
+            pnShowList.ItemHeight = 270;
+            pnShowList.ItemWidth = 180;
             PhimBUS phimBUS = new PhimBUS();
             List<PhimDTO> lstPhimDTO = phimBUS.GetListFilm();
             foreach (PhimDTO phimDTO in lstPhimDTO)

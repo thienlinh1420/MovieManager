@@ -18,10 +18,8 @@ namespace MovieManager_DAO
 
         public int? ID_CUM_RAP_CHIEU_PHIM { get; set; }
 
-        [StringLength(50)]
         public string Ten { get; set; }
 
-        [StringLength(50)]
         public string Dia_chi { get; set; }
 
         public virtual CUM_RAP_CHIEU_PHIM CUM_RAP_CHIEU_PHIM { get; set; }

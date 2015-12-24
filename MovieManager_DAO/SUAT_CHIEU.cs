@@ -18,7 +18,10 @@ namespace MovieManager_DAO
         [StringLength(20)]
         public string ID { get; set; }
 
-        public DateTime? Thoi_gian { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? Ngay_chieu { get; set; }
+
+        public TimeSpan? Gio_chieu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VE> VE { get; set; }
