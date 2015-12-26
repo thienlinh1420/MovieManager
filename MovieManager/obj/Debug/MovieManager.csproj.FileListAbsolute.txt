@@ -16,7 +16,7 @@ D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Adm
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Login_Signup\Login.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieInfo\CommentLine.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\CineplexIndex.baml
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MoviePopup.baml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\FilmInfoInShowtimes.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Resources\Styles\ButtonStyle.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Resources\Styles\TextBlockHyperlinkStyle.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Resources\Styles\TextBoxStyle.baml
@@ -29,9 +29,8 @@ D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Mai
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieInfo\CommentLine.g.cs
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieInfo\FilmDetail.g.cs
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\CineplexIndex.g.cs
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\MovieShowtimes.g.cs
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieThumbnail.g.cs
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MoviePopup.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\FilmInfoInShowtimes.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\MovieShowListCineplex.g.cs
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Profile.g.cs
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\SearchBox\AutoCompleteTextBoxItem.g.cs
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\SearchBox\SearchBox.g.cs
@@ -45,8 +44,7 @@ D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Res
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Resources\Styles\CinemaIndex.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MainWindow.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieInfo\FilmDetail.baml
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\MovieShowtimes.baml
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieThumbnail.baml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\MovieShowListCineplex.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Profile.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Resources\Styles\WatermarkTextBoxStyle.baml
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\SearchBox\SearchBox.baml
@@ -55,5 +53,9 @@ D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Mov
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieManager.csproj.GenerateResource.Cache
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieManager.exe
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\MovieManager.pdb
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\FilmInfoInShowtimes.baml
-D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\FilmInfoInShowtimes.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\CinemaInfoInShowtimes.baml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Showtimes\CinemaInfoInShowtimes.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Thumbnail\MoviePopup.baml
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Thumbnail\MovieThumbnail.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Thumbnail\MoviePopup.g.cs
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager\obj\Debug\Thumbnail\MovieThumbnail.baml

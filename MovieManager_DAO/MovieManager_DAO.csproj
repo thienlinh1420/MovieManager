@@ -55,6 +55,7 @@
     <Compile Include="CUM_RAP_CHIEU_PHIM.cs" />
     <Compile Include="DanhGiaBinhLuanDAO.cs" />
     <Compile Include="DANH_GIA_VA_BINH_LUAN.cs" />
+    <Compile Include="DANH_SACH_PHIM.cs" />
     <Compile Include="GHE.cs" />
     <Compile Include="GheDAO.cs" />
     <Compile Include="KhuyenMaiDAO.cs" />

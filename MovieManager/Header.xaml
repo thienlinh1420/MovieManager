@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MovieManager" x:Class="MovieManager.Header" 
+             xmlns:SearchBox="clr-namespace:MovieManager.SearchBox" 
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="859"
+             d:DesignHeight="50" d:DesignWidth="1349"
              Background="White">
     <UserControl.Resources>
         <Style x:Key="btnHeaderStyle" TargetType="{x:Type Button}">
@@ -30,6 +31,7 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="UserControlHeaderGrid" >
+        <SearchBox:SearchBox x:Name="ucSearchBox" Margin="0,10,180,0" VerticalAlignment="Top" Width="190" HorizontalAlignment="Right"/>
         <Button x:Name="btnLogin" Margin="0,0,30,5" Content="Đăng nhập" FontSize="15" Style="{StaticResource btnHeaderStyle}" Click="btnHeader_Click" HorizontalAlignment="Right" Width="100"/>
         <Button x:Name="btnFilms" Margin="78,0,0,5" Content="Phim" FontSize="15" Style="{StaticResource btnHeaderStyle}" Click="btnHeader_Click" HorizontalAlignment="Left" Width="100"/>
         <Button x:Name="btnCinemas" Margin="225,0,0,5" Content="Rạp chiếu phim" FontSize="15" Style="{StaticResource btnHeaderStyle}" Click="btnHeader_Click" HorizontalAlignment="Left" Width="126"/>

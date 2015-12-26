@@ -11,8 +11,8 @@ namespace MovieManager_DAO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SUAT_CHIEU()
         {
+            DANH_SACH_PHIM = new HashSet<DANH_SACH_PHIM>();
             VE = new HashSet<VE>();
-            PHIM = new HashSet<PHIM>();
         }
 
         [StringLength(20)]
@@ -24,9 +24,9 @@ namespace MovieManager_DAO
         public TimeSpan? Gio_chieu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VE> VE { get; set; }
+        public virtual ICollection<DANH_SACH_PHIM> DANH_SACH_PHIM { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIM> PHIM { get; set; }
+        public virtual ICollection<VE> VE { get; set; }
     }
 }

@@ -16,20 +16,7 @@ namespace MovieManager.Showtimes
         public static readonly DependencyProperty WeekdayProperty = DependencyProperty.Register("Weekday", typeof(string), typeof(ButtonCalendar), new FrameworkPropertyMetadata(string.Empty));
         public static readonly DependencyProperty DayProperty = DependencyProperty.Register("Day", typeof(string), typeof(ButtonCalendar), new FrameworkPropertyMetadata(string.Empty));
 
-        private DateTime _date;
-        private RapChieuPhimDTO _rapChieuPhimDTO;
-
-        public RapChieuPhimDTO RapChieuPhimDTO
-        {
-            get { return _rapChieuPhimDTO; }
-            set { _rapChieuPhimDTO = value; }
-        }
-
-        public DateTime Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
+       
         public string Month
         {
             get { return (string)GetValue(MonthProperty); }
@@ -52,8 +39,7 @@ namespace MovieManager.Showtimes
             Month = date.Month.ToString();
             Day = date.Day.ToString();
             Weekday = date.DayOfWeek.ToString().Substring(0, 3);
-            Date = date;
-            RapChieuPhimDTO = rapDTO;
+            this.Tag = rapDTO.ID.ToString() + '|' + date.ToString();
         }
 
         public ButtonCalendar()

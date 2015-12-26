@@ -13,8 +13,7 @@ namespace MovieManager_DAO
         public PHIM()
         {
             DANH_GIA_VA_BINH_LUAN = new HashSet<DANH_GIA_VA_BINH_LUAN>();
-            RAP_CHIEU_PHIM = new HashSet<RAP_CHIEU_PHIM>();
-            SUAT_CHIEU = new HashSet<SUAT_CHIEU>();
+            DANH_SACH_PHIM = new HashSet<DANH_SACH_PHIM>();
         }
 
         public int ID { get; set; }
@@ -41,9 +40,6 @@ namespace MovieManager_DAO
         public virtual ICollection<DANH_GIA_VA_BINH_LUAN> DANH_GIA_VA_BINH_LUAN { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RAP_CHIEU_PHIM> RAP_CHIEU_PHIM { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUAT_CHIEU> SUAT_CHIEU { get; set; }
+        public virtual ICollection<DANH_SACH_PHIM> DANH_SACH_PHIM { get; set; }
     }
 }

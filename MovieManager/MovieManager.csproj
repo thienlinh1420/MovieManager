@@ -75,14 +75,17 @@
     <Compile Include="MovieInfo\FilmDetail.xaml.cs">
       <DependentUpon>FilmDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Showtimes\CinemaInfoInShowtimes.xaml.cs">
+      <DependentUpon>CinemaInfoInShowtimes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Showtimes\CineplexIndex.xaml.cs">
       <DependentUpon>CineplexIndex.xaml</DependentUpon>
     </Compile>
     <Compile Include="Showtimes\FilmInfoInShowtimes.xaml.cs">
       <DependentUpon>FilmInfoInShowtimes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Showtimes\MovieShowtimes.xaml.cs">
-      <DependentUpon>MovieShowtimes.xaml</DependentUpon>
+    <Compile Include="Showtimes\MovieShowListCineplex.xaml.cs">
+      <DependentUpon>MovieShowListCineplex.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Styles\WatermarkTextBox.cs" />
     <Compile Include="SearchBox\AutoCompleteTextBox.cs" />
@@ -142,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Showtimes\CinemaInfoInShowtimes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Showtimes\CineplexIndex.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -150,15 +157,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Showtimes\MovieShowtimes.xaml">
+    <Page Include="Showtimes\MovieShowListCineplex.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MovieThumbnail.xaml">
+    <Page Include="Thumbnail\MovieThumbnail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MoviePopup.xaml">
+    <Page Include="Thumbnail\MoviePopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,10 +203,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovieThumbnail.xaml.cs">
+    <Compile Include="Thumbnail\MovieThumbnail.xaml.cs">
       <DependentUpon>MovieThumbnail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MoviePopup.xaml.cs">
+    <Compile Include="Thumbnail\MoviePopup.xaml.cs">
       <DependentUpon>MoviePopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Profile.xaml.cs">

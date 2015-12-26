@@ -14,6 +14,7 @@ namespace MovieManager_DAO
 
         public virtual DbSet<CUM_RAP_CHIEU_PHIM> CUM_RAP_CHIEU_PHIM { get; set; }
         public virtual DbSet<DANH_GIA_VA_BINH_LUAN> DANH_GIA_VA_BINH_LUAN { get; set; }
+        public virtual DbSet<DANH_SACH_PHIM> DANH_SACH_PHIM { get; set; }
         public virtual DbSet<GHE> GHE { get; set; }
         public virtual DbSet<KHUYEN_MAI> KHUYEN_MAI { get; set; }
         public virtual DbSet<LOAI_NGUOI_DUNG> LOAI_NGUOI_DUNG { get; set; }
@@ -32,6 +33,10 @@ namespace MovieManager_DAO
 
             modelBuilder.Entity<DANH_GIA_VA_BINH_LUAN>()
                 .Property(e => e.ID_NGUOI_DUNG)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DANH_SACH_PHIM>()
+                .Property(e => e.ID_SUAT_CHIEU)
                 .IsUnicode(false);
 
             modelBuilder.Entity<GHE>()
@@ -91,14 +96,16 @@ namespace MovieManager_DAO
                 .HasForeignKey(e => e.ID_PHIM);
 
             modelBuilder.Entity<PHIM>()
-                .HasMany(e => e.RAP_CHIEU_PHIM)
-                .WithMany(e => e.PHIM)
-                .Map(m => m.ToTable("DANH_SACH_PHIM").MapLeftKey("ID_PHIM").MapRightKey("ID_RAP_CHIEU_PHIM"));
+                .HasMany(e => e.DANH_SACH_PHIM)
+                .WithRequired(e => e.PHIM)
+                .HasForeignKey(e => e.ID_PHIM)
+                .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<PHIM>()
-                .HasMany(e => e.SUAT_CHIEU)
-                .WithMany(e => e.PHIM)
-                .Map(m => m.ToTable("THOI_GIAN_CHIEU").MapLeftKey("ID_PHIM").MapRightKey("ID_SUAT_CHIEU"));
+            modelBuilder.Entity<RAP_CHIEU_PHIM>()
+                .HasMany(e => e.DANH_SACH_PHIM)
+                .WithRequired(e => e.RAP_CHIEU_PHIM)
+                .HasForeignKey(e => e.ID_RAP_CHIEU_PHIM)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<RAP_CHIEU_PHIM>()
                 .HasOptional(e => e.KHUYEN_MAI)
@@ -107,6 +114,12 @@ namespace MovieManager_DAO
             modelBuilder.Entity<SUAT_CHIEU>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<SUAT_CHIEU>()
+                .HasMany(e => e.DANH_SACH_PHIM)
+                .WithRequired(e => e.SUAT_CHIEU)
+                .HasForeignKey(e => e.ID_SUAT_CHIEU)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SUAT_CHIEU>()
                 .HasMany(e => e.VE)

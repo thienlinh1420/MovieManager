@@ -1,0 +1,81 @@
+﻿<UserControl xmlns:Showtimes="clr-namespace:MovieManager.Showtimes"  
+             x:Class="MovieManager.Showtimes.MovieShowListCineplex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="1000" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MovieManager;component/Resources/Styles/TextBlockHyperlinkStyle.xaml"/>
+                <ResourceDictionary Source="/MovieManager;component/Resources/Styles/ButtonCalendar.xaml"/>
+                <ResourceDictionary Source="/MovieManager;component/Resources/Styles/CinemaIndex.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <DockPanel>
+            <Grid Height="460" 
+              VerticalAlignment="Top"
+              DockPanel.Dock="Top">
+                <TextBlock Text="MOVIE MANAGER"
+                       Foreground="#636363"
+                       Panel.ZIndex="1" 
+                       FontFamily="Rockwell Extra Bold" 
+                       Margin="106,84,107,0" 
+                       FontSize="40" 
+                       TextAlignment="Center" 
+                       Height="68" 
+                       VerticalAlignment="Top"/>
+                <Image Stretch="Fill" 
+                   Source="/MovieManager;component/Resources/Background-Icon/bg_showtimes_favorite.png"/>
+                <Border BorderThickness="0, 1, 0, 1" 
+                    BorderBrush="Gray"
+                    Margin="80,191,80,0" VerticalAlignment="Top">
+                    <WrapPanel x:Name="wpnCineplex"
+                           MaxWidth="700" 
+                           ItemHeight="40"
+                           ItemWidth="100"/>
+                </Border>
+                <WrapPanel x:Name="wpnCinema"
+                       Margin="29,0,29,15"
+                       MaxWidth="700"
+                       ItemHeight="30"
+                       ItemWidth="230" 
+                       Height="161" 
+                       VerticalAlignment="Bottom">
+
+                </WrapPanel>
+            </Grid>
+            <StackPanel x:Name="pnShowtimesInfo" Background="#fdfcf0"
+                        Visibility="Collapsed">
+               
+                <TextBlock x:Name="tblCinemaName"
+                           Height="68" 
+                           Margin="30,35,30,0" 
+                           FontSize="45" 
+                           TextAlignment="Center" FontFamily="Segoe UI Black"/>
+                 <StackPanel x:Name="pnCinemaInfo"
+                            Orientation="Vertical"
+                             Margin="10, 35, 10, 0"
+                             Visibility="Collapsed"/>
+                <Border Margin="10,35,10,0" 
+                        Height="76"
+                        BorderThickness="0, 2, 0, 2"
+                        BorderBrush="Black">
+                    <StackPanel x:Name="pnCalendar" 
+                		Orientation="Horizontal"
+                                />
+                </Border>
+                <Border BorderThickness="0, 1, 0, 0"
+                        BorderBrush="Black"
+                        Margin="10,35,10,0">
+                    <StackPanel x:Name="pnFilmInfoInShowtimes" ></StackPanel>
+
+                </Border>
+            </StackPanel>
+
+        </DockPanel>
+    </Grid>
+</UserControl>

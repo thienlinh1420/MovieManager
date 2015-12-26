@@ -2,7 +2,6 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:MovieManager" 
-        xmlns:SearchBox="clr-namespace:MovieManager.SearchBox" 
         x:Name="mainWindow" x:Class="MovieManager.MainWindow"
         Background="Gray" 
         Icon="Resources/Background-Icon/logo.png"
@@ -25,7 +24,6 @@
                            Background="Transparent" 
                            Margin="0,130,0,10" 
                            MaxWidth="1000"/>
-                <SearchBox:SearchBox x:Name="ucSearchBox" Margin="0,10,160,0" VerticalAlignment="Top" Width="190" HorizontalAlignment="Right"/>
             </Grid>
         </ScrollViewer>
         <Grid x:Name="OverlayGrid" 
