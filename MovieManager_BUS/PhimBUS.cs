@@ -15,10 +15,6 @@ namespace MovieManager_BUS
         {
            phimDAO  = new PhimDAO();
         }
-        public PhimDTO Search(int ID)
-        {
-            return phimDAO.Search(ID);
-        }
         public List<PhimDTO> GetListFilm()
         {
             return phimDAO.GetListFilm();
@@ -27,9 +23,11 @@ namespace MovieManager_BUS
         {
             return phimDAO.SearchByText(searchText);
         }
-        public List<PhimDTO> SearchByShowtimesAndCinema(List<SuatChieuDTO> listShowings, RapChieuPhimDTO rapDTO)
+        public List<PhimDTO> SearchByDate(DateTime date, RapChieuPhimDTO rapDTO)
         {
-            return phimDAO.SearchByShowtimesAndCinema(listShowings, rapDTO);
+            SuatChieuDAO suatChieuDAO = new SuatChieuDAO();
+            List<SuatChieuDTO> listShowings = suatChieuDAO.SearchByTime(date);
+            return phimDAO.SearchByShowtimes(listShowings, rapDTO);
         }
 
     }

@@ -1,6 +1,4 @@
-﻿<UserControl xmlns:Styles="clr-namespace:MovieManager.Resources.Styles"  
-             xmlns:MovieManager="clr-namespace:MovieManager"  
-             x:Class="MovieManager.MovieInfo.FilmDetail"
+﻿<UserControl xmlns:Styles="clr-namespace:MovieManager.Resources.Styles"  xmlns:MovieManager="clr-namespace:MovieManager"  x:Class="MovieManager.MovieInfo.FilmDetail"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"

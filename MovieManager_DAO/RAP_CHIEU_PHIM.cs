@@ -11,7 +11,7 @@ namespace MovieManager_DAO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RAP_CHIEU_PHIM()
         {
-            DANH_SACH_PHIM = new HashSet<DANH_SACH_PHIM>();
+            PHIM = new HashSet<PHIM>();
         }
 
         public int ID { get; set; }
@@ -24,9 +24,9 @@ namespace MovieManager_DAO
 
         public virtual CUM_RAP_CHIEU_PHIM CUM_RAP_CHIEU_PHIM { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DANH_SACH_PHIM> DANH_SACH_PHIM { get; set; }
-
         public virtual KHUYEN_MAI KHUYEN_MAI { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIM> PHIM { get; set; }
     }
 }

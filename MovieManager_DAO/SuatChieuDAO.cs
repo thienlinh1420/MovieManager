@@ -41,7 +41,29 @@ namespace MovieManager_DAO
         //    }
 
         //}
-
+        public List<SuatChieuDTO> SearchByTime(DateTime date)
+        {
+            date = DateTime.Now.Date;
+            List<SuatChieuDTO> lstSuatChieuDTO = new List<SuatChieuDTO>();
+            var context = new MovieManagerDataContext();
+            var data = from showings in context.SUAT_CHIEU
+                       where showings.Ngay_chieu == date
+                       //where showings.ID == "12012015T03"
+                       select showings;
+           
+            if (data.Count() > 0)
+            {
+                foreach (var item in data)
+                {
+                    SuatChieuDTO suatChieuDTO = new SuatChieuDTO();
+                    suatChieuDTO.ID = item.ID;
+                    suatChieuDTO.NgayChieu = (DateTime)item.Ngay_chieu;
+                    suatChieuDTO.GioChieu = (TimeSpan)item.Gio_chieu;
+                    lstSuatChieuDTO.Add(suatChieuDTO);
+                }
+            }
+             return lstSuatChieuDTO;
+        }
 
        public List<DateTime> GetDate()
         {
@@ -57,43 +79,23 @@ namespace MovieManager_DAO
            return listDate;
         }
 
-       public List<SuatChieuDTO> GetListShowings(DateTime date)
+       public List<SuatChieuDTO> GetListShowings(int FilmID)
        {
            List<SuatChieuDTO> listShowings = new List<SuatChieuDTO>();
            MovieManagerDataContext context = new MovieManagerDataContext();
-           
-               var data = from showing in context.SUAT_CHIEU
-                          where showing.Ngay_chieu == date
-                          select showing;
-
-               foreach (var item in data)
-               {
-                   SuatChieuDTO showings = new SuatChieuDTO();
-                   showings.ID = item.ID;
-                   showings.NgayChieu = (DateTime)item.Ngay_chieu;
-                   showings.GioChieu = (TimeSpan)item.Gio_chieu;
-                   listShowings.Add(showings);
-               }
-           
-           return listShowings;
-       }
-
-       public List<TimeSpan> GetTime(int CinemaID, int FilmID, DateTime date)
-       {
-           List<TimeSpan> listTime = new List<TimeSpan>();
-           MovieManagerDataContext context = new MovieManagerDataContext();
-
-           var data = from showing in context.DANH_SACH_PHIM
-                      join sc in context.SUAT_CHIEU on showing.ID_SUAT_CHIEU equals sc.ID
-                      where showing.ID_RAP_CHIEU_PHIM == CinemaID && showing.ID_PHIM == FilmID &&
-                            sc.Ngay_chieu == date
-                      select sc;
+           var data = from film in context.PHIM
+                      where film.ID == FilmID
+                      select film.SUAT_CHIEU;
 
            foreach (var item in data)
            {
-               listTime.Add((TimeSpan)item.Gio_chieu);
+               SuatChieuDTO showings = new SuatChieuDTO();
+               item.First().ID = showings.ID;
+               item.First().Ngay_chieu = showings.NgayChieu;
+               item.First().Gio_chieu = showings.GioChieu;
+               listShowings.Add(showings);
            }
-           return listTime;
+           return listShowings;
        }
     }
 }

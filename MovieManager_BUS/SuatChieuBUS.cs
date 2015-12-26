@@ -15,17 +15,10 @@ namespace MovieManager_BUS
             SuatChieuDAO suatChieuDAO = new SuatChieuDAO();
             return suatChieuDAO.GetDate();
         }
-        public List<SuatChieuDTO> GetListShowings(DateTime date)
+        public List<SuatChieuDTO> GetListShowings(int FilmID)
         {
             SuatChieuDAO suatChieuDAO = new SuatChieuDAO();
-            return suatChieuDAO.GetListShowings(date);
-        }
-
-        public List<TimeSpan> GetTime(int CinemaID, int FilmID, DateTime date)
-        {
-            SuatChieuDAO suatChieuDAO = new SuatChieuDAO();
-            List<TimeSpan> listTime = suatChieuDAO.GetTime(CinemaID, FilmID, date);
-            return listTime.OrderByDescending(t => t.Minutes).ToList();
+            return suatChieuDAO.GetListShowings(FilmID);
         }
     }
 }

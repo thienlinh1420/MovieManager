@@ -26,16 +26,16 @@ namespace MovieManager.Showtimes
             InitializeComponent();
         }
 
-        public void SetInfo(PhimDTO phimDTO, List<TimeSpan> listTime)
+        public void SetInfo(PhimDTO phimDTO, List<SuatChieuDTO> listShowings)
         {
             tblTittle.Text = phimDTO.Ten.ToUpper();
             imgPoster.Source = new BitmapImage(new Uri(@"/MovieManager;component/Resources/Images/" + phimDTO.PathPoster, UriKind.Relative));
-            foreach (var time in listTime)
+            foreach (var showings in listShowings)
             {
                 Button btnTime = new Button();
-                btnTime.Content = time.ToString(@"hh\:mm") + "\n  " + DateTime.Today.Add(time).ToString("tt");
+                btnTime.Content = showings.GioChieu.ToString(@"hh\:mm") + "\n  " + DateTime.Today.Add(showings.GioChieu).ToString("tt");
                 btnTime.Style = (Style)FindResource("ButtonTimeStyle");
-                btnTime.Tag = time;
+                btnTime.Tag = showings;
                 pnTime.Children.Add(btnTime);
             }
         }

@@ -17,7 +17,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MovieManager.Thumbnail;
 
 namespace MovieManager
 {
@@ -37,7 +36,7 @@ namespace MovieManager
             ucHeader.ShowFilmsPage += ShowFilmsPage;
             ucHeader.ShowCinemasPage += ShowCinemasPage;
             ucHeader.ShowMovieShowtimes += ShowMovieShowtimes;
-            ucHeader.ShowFilmInfo += ShowFilmInfo;
+            ucSearchBox.ShowFilmInfo += ShowFilmInfo;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -49,19 +48,13 @@ namespace MovieManager
         private void ShowMovieShowtimes()
         {
             pnShowList.Children.Clear();
-            pnShowList.ItemWidth = 1000;
-            pnShowList.ItemHeight = double.NaN;
-            var movieShowtimes = new MovieShowListCineplex(MovieShowListCineplex.Mode.ListShowtimes);
-
-            pnShowList.Children.Add(movieShowtimes);
         }
-
         private void ShowCinemasPage()
         {
             pnShowList.Children.Clear();
             pnShowList.ItemWidth = 1000;
             pnShowList.ItemHeight = double.NaN;
-            var movieShowtimes = new MovieShowListCineplex(MovieShowListCineplex.Mode.ListCinema);
+            var movieShowtimes = new MovieShowtimes();
            
             pnShowList.Children.Add(movieShowtimes);
 
@@ -80,12 +73,9 @@ namespace MovieManager
                 mvtn.SetData(phimDTO);
                 mvtn.ShowFilmInfo += ShowFilmInfo;
                 mvtn.WatchTrailer += WatchTrailer;
-                //mvtn.GotoCinema += GotoCinema;
-                //mvtn.GotoShowtime += GotoShowtime;
                 pnShowList.Children.Add(mvtn);
             }
         }
-
         public void Login()
         {
 
@@ -166,24 +156,6 @@ namespace MovieManager
             ytPlayer.ShowYouTubeVideo(phimDTO.Trailer + "&autoplay=1");
         }
 
-        private void GotoShowtime(PhimDTO phimDTO)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void GotoCinema(PhimDTO phimDTO)
-        {
-            pnShowList.Children.Clear();
-            pnShowList.ItemWidth = 1000;
-            pnShowList.ItemHeight = double.NaN;
-            var movieShowtimes = new MovieShowListCineplex(MovieShowListCineplex.Mode.ListShowtimes);
-
-            pnShowList.Children.Add(movieShowtimes);
-            RapChieuPhimBUS rapBUS = new RapChieuPhimBUS();
-            RapChieuPhimDTO rapDTO = rapBUS.Search(1);
-            //movieShowtimes.GotoCinema(rapDTO);
-            //movieShowtimes.GotoCinema(phimDTO);
-            //chưa xong!!!!!!!!!!!!
-        }
+        
     }
 }

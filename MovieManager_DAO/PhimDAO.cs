@@ -85,31 +85,35 @@ namespace MovieManager_DAO
             return list;
         }
 
-        public List<PhimDTO> SearchByShowtimesAndCinema(List<SuatChieuDTO> listShowings, RapChieuPhimDTO rapDTO)
+        public List<PhimDTO> SearchByShowtimes(List<SuatChieuDTO> listShowings, RapChieuPhimDTO rapDTO)
         {
             List<PhimDTO> list = new List<PhimDTO>();
            
             MovieManagerDataContext context = new MovieManagerDataContext();
-
-            var listFilm = from dsPhim in context.DANH_SACH_PHIM
-                       where dsPhim.ID_RAP_CHIEU_PHIM == rapDTO.ID
-                       select dsPhim;
             foreach (var showings in listShowings)
             {
-                var data = from phim in listFilm
-                           where phim.ID_SUAT_CHIEU == showings.ID
+                
+                var data = from phim in context.PHIM
+                           where phim.RAP_CHIEU_PHIM.Select(x => x.ID).Contains(rapDTO.ID) &&
+                           phim.SUAT_CHIEU.Select(y => y.ID).Contains(showings.ID)
                            select phim;
-            
                 if (data.Count() > 0)
                 {
                     foreach (var item in data)
                     {
-                        PhimDTO phimDTO = Search(item.ID_PHIM);
-                        if (!list.Any(p => p.ID == phimDTO.ID))
+                        PhimDTO phimDTO = new PhimDTO();
+                        phimDTO.ID = Convert.ToInt32(item.ID);
+                        phimDTO.Ten = item.Ten;
+                        phimDTO.NamSanXuat = Convert.ToInt32(item.Nam_san_xuat);
+                        phimDTO.IMDb = (float)Convert.ToDouble(item.IMDb);
+                        phimDTO.TomTat = item.Tom_tat;
+                        phimDTO.PathPoster = item.Duong_dan_Poster;
+                        phimDTO.Trailer = item.Trailer;
+                        phimDTO.ThoiLuong = Convert.ToInt32(item.Thoi_luong);
+                        if (!list.Any(s => s.ID == phimDTO.ID))
                         {
                             list.Add(phimDTO);
                         }
-
                     }
                 }
             }

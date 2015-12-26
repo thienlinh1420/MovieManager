@@ -1,4 +1,5 @@
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DTO\bin\Debug\MovieManager_DTO.dll
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DTO\bin\Debug\MovieManager_DTO.pdb
+D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DTO\obj\Debug\MovieManager_DTO.csprojResolveAssemblyReference.cache
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DTO\obj\Debug\MovieManager_DTO.dll
 D:\Documents\5th Semester\PTTKPM\Project\MovieManager\MovieManager_DTO\obj\Debug\MovieManager_DTO.pdb

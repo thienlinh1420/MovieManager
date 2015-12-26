@@ -27,23 +27,15 @@ namespace MovieManager
         public event HeaderEventHandler ShowFilmsPage;
         public event HeaderEventHandler ShowCinemasPage;
         public event HeaderEventHandler ShowMovieShowtimes;
-        public delegate void ShowFilmInfoHandler(PhimDTO phimDTO);
-        public event ShowFilmInfoHandler ShowFilmInfo;
 
         enum CalledEvent { Login, ShowFilmsPage, ShowCinemasPage, MovieShowtimes}
         public Header()
         {
             InitializeComponent();
-            ucSearchBox.ShowFilmInfo += ucSearchBox_ShowFilmInfo;
             btnLogin.Tag = CalledEvent.Login;
             btnFilms.Tag = CalledEvent.ShowFilmsPage;
             btnCinemas.Tag = CalledEvent.ShowCinemasPage;
             btnMovieShowtimes.Tag = CalledEvent.MovieShowtimes;
-        }
-
-        private void ucSearchBox_ShowFilmInfo(PhimDTO phimDTO)
-        {
-            ShowFilmInfo(phimDTO);
         }
 
         private void btnHeader_Click(object sender, RoutedEventArgs e)
